@@ -5,7 +5,7 @@ const size = {
 
 const theme = {
   mainColor: 'pink',
-  subColor: 'gray',
+  subColor: '#9e9e9e',
   mobile: `(max-width: ${size.mobile})`,
   desktop: `(min-width: ${size.desktop})`,
 };

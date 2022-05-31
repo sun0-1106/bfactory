@@ -8,7 +8,6 @@ const Container = styled.div`
     background-color: ${props => props.theme.mainColor};
     width: 100vw;
     height: 100vh;
-    border: 3px solid blue;
   }
   @media ${props => props.theme.mobile} {
     background-color: ${props => props.theme.subColor};
@@ -17,13 +16,20 @@ const Container = styled.div`
   }
   position: relative;
   #canvas {
-    display: absolute;
+    @media ${props => props.theme.desktop} {
+      width: 900px;
+      height: 700px;
+    }
+    @media ${props => props.theme.mobile} {
+      width: 400px;
+      height: 300px;
+    }
+    position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
     border: 1px solid black;
     background-color: #fff;
-    width: 1000px;
-    height: 700px;
   }
 `;
 const BtnBox = styled.div`
@@ -33,9 +39,9 @@ const BtnBox = styled.div`
     height: 70px;
   }
   @media ${props => props.theme.mobile} {
-    width: 500px;
+    left: 2%;
+    width: 480px;
     height: 70px;
-    border: 1px solid yellow;
   }
   position: relative;
   display: flex;
@@ -49,7 +55,7 @@ const Btn = styled.button`
     height: 30px;
   }
   @media ${props => props.theme.mobile} {
-    width: 90px;
+    width: 85px;
     height: 30px;
   }
   background-color: orange;
