@@ -4,8 +4,8 @@ const size = {
 };
 
 const theme = {
-  mainColor: '#4748C6',
-  subColor: '#1B1B1B',
+  mainColor: 'pink',
+  subColor: 'gray',
   mobile: `(max-width: ${size.mobile})`,
   desktop: `(min-width: ${size.desktop})`,
 };
